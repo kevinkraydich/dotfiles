@@ -1,0 +1,7 @@
+Host pi-zero
+	HostName 10.0.0.70
+	User kevin
+
+Host pi-four
+	HostName 10.0.0.88
+	User kevin
