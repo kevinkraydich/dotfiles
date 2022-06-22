@@ -120,3 +120,8 @@ function extract {
     rm $1
 }
 
+# Function that calls `ls` after `cd`
+function cd {
+    builtin cd "$@" && ls;
+}
+
