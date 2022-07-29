@@ -66,6 +66,16 @@ set mouse+=a
 " Change tab key to instead be 4 spaces
 :set tabstop=4 shiftwidth=4 expandtab
 
+" Rebind HJKL for faster navigation. Specifically.
+" H -> Jump to start of line
+" J -> Jump down half a screen
+" K -> Jump up half a screen
+" L -> Jump to end of line
+nnoremap H ^
+nnoremap J <C-d>
+nnoremap K <C-u>
+nnoremap L $
+
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
 " for movement, rather than using more efficient movement commands, is also a
