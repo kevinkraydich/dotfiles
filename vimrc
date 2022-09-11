@@ -71,10 +71,16 @@ set mouse+=a
 " J -> Jump down half a screen
 " K -> Jump up half a screen
 " L -> Jump to end of line
+" Normal mode
 nnoremap H ^
 nnoremap J <C-d>
 nnoremap K <C-u>
 nnoremap L $
+" Visual mode
+vnoremap H ^
+vnoremap J <C-d>
+vnoremap K <C-u>
+vnoremap L $
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
