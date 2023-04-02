@@ -71,16 +71,14 @@ ZSH_THEME="cloud"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    aws
+    colored-man-pages
+    common-aliases
+    frontend-search
     git
-    zsh-autosuggestions
     sudo
-    vi-mode
+    zsh-autosuggestions
 )
-    #web-search
-    #copyfile
-    #dirhistory
-    #jsontools
-#)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,11 +92,18 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Change command line prompt
+PROMPT="%n@%m %1~ %# "
+
 # Enable Vim in shell
 bindkey -v
-
-# Enable Vim as default editor
 export EDITOR=vim
+
+# Open daily notes
+function dailynotes {
+    file_path=~/notes/$(date '+Y-%m-%d').md
+    vim $file_path +$
+}
 
 # Function for backing up via Git
 function backup {
