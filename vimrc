@@ -54,7 +54,7 @@ set smartcase
 set incsearch
 
 " Unbind some useless/annoying default key bindings.
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap Q <Nop>
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
@@ -66,7 +66,11 @@ set mouse+=a
 " Change tab key to instead be 4 spaces
 :set tabstop=4 shiftwidth=4 expandtab
 
-" Rebind HJKL for faster navigation. Specifically.
+" Enable clipboard (for Linux)
+"set clipboard=unnamed       "Windows/macOS
+set clipboard=unnamedplus   "Linux
+
+" Rebind HJKL for faster navigation.
 " H -> Jump to start of line
 " J -> Jump down half a screen
 " K -> Jump up half a screen
@@ -97,3 +101,4 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
