@@ -73,12 +73,12 @@ ZSH_THEME="cloud"
 plugins=(
     aws
     colored-man-pages
-    common-aliases
     frontend-search
     git
     sudo
     zsh-autosuggestions
 )
+#    common-aliases
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,5 +121,22 @@ function extract {
 # Function that calls `ls` after `cd`
 function cd {
     builtin cd "$@" && ls;
+}
+
+# Check latest commit for common errors
+function check-commit {
+    # Dictionary with this structure:
+    # name -> regex
+    typeset -A commonMistakes=(
+        "Comments" "//"
+        "TODOs" "TODO"
+        "Print statements" "console.log"
+    )
+    echo "Checking latest commit..."
+    for mistake in "${(@k)commonMistakes}"; do
+        local regex=${commonMistakes[$mistake]}
+        echo "$mistake\n"
+        git diff HEAD~1 | grep $regex -C 5 --color=always
+    done
 }
 
