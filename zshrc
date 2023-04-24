@@ -73,7 +73,6 @@ ZSH_THEME="cloud"
 plugins=(
     aws
     colored-man-pages
-    frontend-search
     git
     sudo
     zsh-autosuggestions
@@ -101,7 +100,7 @@ export EDITOR=vim
 
 # Open daily notes
 function dailynotes {
-    file_path=~/notes/$(date '+Y-%m-%d').md
+    file_path=~/notes/$(date '+%Y-%m-%d') #.md
     vim $file_path +$
 }
 
