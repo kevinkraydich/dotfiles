@@ -1,3 +1,12 @@
 [user]
 	email = kevin.kraydich@gmail.com
 	name = Kevin Kraydich
+[rebase]
+	autosquash = true
+[init]
+	defaultBranch = main
+[format]
+	pretty = oneline
+[log]
+	decorate = short
+	abbrevCommit = true
