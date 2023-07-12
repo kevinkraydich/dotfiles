@@ -100,7 +100,7 @@ export EDITOR=vim
 
 # Open daily notes
 function dailynotes {
-    file_path=~/notes/$(date '+%Y-%m-%d') #.md
+    file_path=~/notes/daily/$(date '+%Y-%m-%d') #.md
     vim $file_path +$
 }
 
