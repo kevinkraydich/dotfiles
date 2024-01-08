@@ -92,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Change command line prompt
-PROMPT="%n@%m %1~ %# "
+# PROMPT="%n@%m %1~ %# "
 
 # Enable Vim in shell
 bindkey -v
