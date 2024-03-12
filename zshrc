@@ -143,3 +143,6 @@ compinit
 # Add nvim to PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+# Add .local to PATH
+export PATH="$PATH:/home/kkray/.local/bin"
+
