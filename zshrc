@@ -104,19 +104,6 @@ function dailynotes {
     vim $file_path +$
 }
 
-# Function for backing up via Git
-function backup {
-	git add .
-	git commit -m $1
-	git push
-}
-
-# Function for unzipping and discarding an archive
-function extract {
-    unzip $1
-    rm $1
-}
-
 # Function that calls `ls` after `cd`
 function cd {
     builtin cd "$@" && ls;
@@ -141,10 +128,8 @@ function check-commit {
 
 # NVM settings
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"           # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Start of new ZSH features
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -155,5 +140,6 @@ zstyle :compinstall filename '/home/kevin/.zshrc'
 autoload -Uz compinit
 compinit
 
-# End of new ZSH features
+# Add nvim to PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
