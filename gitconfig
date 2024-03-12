@@ -6,7 +6,7 @@
 [init]
 	defaultBranch = main
 [format]
-	pretty = oneline
+	pretty = short
 [log]
 	decorate = short
 	abbrevCommit = true
