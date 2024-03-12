@@ -10,5 +10,5 @@
         create: true
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-
+    ~/.config/nvim: nvim
 
