@@ -50,6 +50,9 @@ opt.incsearch = true
 -- Disable audible bell
 opt.belloff = "all"
 
+-- Enable magic search
+opt.magic = true
+
 -- Change tab key to instead be 4 spaces
 opt.tabstop     = 4
 opt.shiftwidth  = 4
