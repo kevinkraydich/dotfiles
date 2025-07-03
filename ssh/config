@@ -1,7 +1,12 @@
+Host laptop
+    HostName 192.168.0.249
+    User kkray
+
 Host pi-zero
-	HostName 10.0.0.70
-	User kevin
+    HostName 192.168.0.250
+    User kkray
 
 Host pi-four
-	HostName 10.0.0.88
-	User kevin
+    HostName 192.168.0.251
+    User kkray
+
