@@ -111,7 +111,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
     Plug('nvim-treesitter/nvim-treesitter', { ['do']=':TSUpdate' })
     Plug('neovim/nvim-lspconfig') --, { ['do']=':TSUpdate' })
-    --Plug('zbirenbaum/copilot.lua')
+    Plug('zbirenbaum/copilot.lua')
 vim.call('plug#end')
 
 -- Treesitter
