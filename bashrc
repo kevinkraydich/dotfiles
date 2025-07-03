@@ -72,18 +72,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -115,3 +103,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Function that calls `ls` after `cd`
+function cd {
+    builtin cd "$@" && ls;
+}
+
+# Enable Vim in shell
+set -o vi
+export EDITOR=vim
+
+# Auto-completion
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
