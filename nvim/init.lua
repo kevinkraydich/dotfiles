@@ -106,37 +106,37 @@ keymap.set({'i','n'}, '<down>',  get_command("j", "down arrow"))
 
 ----- START PLUGINS -----
 
-local Plug = vim.fn['plug#']
+--local Plug = vim.fn['plug#']
 
-vim.call('plug#begin')
-    Plug('nvim-treesitter/nvim-treesitter', { ['do']=':TSUpdate' })
-    Plug('neovim/nvim-lspconfig') --, { ['do']=':TSUpdate' })
-    Plug('zbirenbaum/copilot.lua')
-vim.call('plug#end')
+--vim.call('plug#begin')
+--    Plug('nvim-treesitter/nvim-treesitter', { ['do']=':TSUpdate' })
+--    Plug('neovim/nvim-lspconfig') --, { ['do']=':TSUpdate' })
+--    Plug('zbirenbaum/copilot.lua')
+--vim.call('plug#end')
 
 -- Treesitter
-require'nvim-treesitter.configs'.setup {
-    auto_install = true,
-    highlight = {
-        enable = true
-    }
-}
+--require'nvim-treesitter.configs'.setup {
+--    auto_install = true,
+--    highlight = {
+--        enable = true
+--    }
+--}
 
-local lspconfig = require('lspconfig')
+--local lspconfig = require('lspconfig')
 
 -- Python
-lspconfig.pylsp.setup{
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = {'W391'},
-          maxLineLength = 100
-        }
-      }
-    }
-  }
-}
+--lspconfig.pylsp.setup{
+--  settings = {
+--    pylsp = {
+--      plugins = {
+--        pycodestyle = {
+--          ignore = {'W391'},
+--          maxLineLength = 100
+--        }
+--      }
+--    }
+--  }
+--}
 
 -- Terraform
 --lspconfig.terraformls.setup{}

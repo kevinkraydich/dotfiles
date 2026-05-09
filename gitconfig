@@ -1,6 +1,7 @@
 [user]
-	email = kevin.kraydich@gmail.com
-	name = Kevin Kraydich
+	email = github@kevinkraydi.ch
+	name = kevinkraydich
+	signingkey = A6AB119590BD2FCD
 [rebase]
 	autosquash = true
 [init]
@@ -10,3 +11,7 @@
 [log]
 	decorate = short
 	abbrevCommit = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true

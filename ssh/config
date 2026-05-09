@@ -1,4 +1,4 @@
-Host laptop
+Host pc-mini
     HostName 192.168.0.249
     User kkray
 
