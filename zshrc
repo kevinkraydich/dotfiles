@@ -129,6 +129,9 @@ function check-commit {
     done
 }
 
+# Alias for Vim - uncomment on devices without Vim
+#alias vim=vi
+
 # NVM settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"           # This loads nvm
